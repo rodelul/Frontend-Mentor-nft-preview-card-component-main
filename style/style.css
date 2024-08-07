@@ -41,28 +41,30 @@ body {
 }
 
 .hero--inner img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
 .images {
-    position: relative;
+    width: 100%;
+    height: 250px;
+    background-image: url(/images/image-equilibrium.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    transition: background-image 0.5s ease-in-out;
 }
 
-.container  .view {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.images:hover::after {
+    content: url(/images/icon-view.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #0094a291;
+    border-radius: 10px;
 }
-
-.container  .view:hover{
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    transition: 500ms;
-}
-
 
 
 .hero--inner .price {
@@ -70,6 +72,17 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid hsl(215, 51%, 70%);
     padding-bottom: 20px;
+}
+
+a,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .hero--inner .price .eth {
