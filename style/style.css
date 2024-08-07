@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.container {
+    max-width: 300px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+}
+
+.hero--inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.hero--inner h3 {
+    color: white;
+}
+
+.hero--inner p {
+    color: hsl(215, 51%, 70%);
+}
+
+.hero--inner img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.images {
+    position: relative;
+}
+
+.container  .view {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.container  .view:hover{
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: 500ms;
+}
+
+
+
+.hero--inner .price {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 51%, 70%);
+    padding-bottom: 20px;
+}
+
+.hero--inner .price .eth {
+    color: hsl(178, 100%, 50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero--inner .price .eth::before {
+    content: url(/images/icon-ethereum.svg);
+}
+
+.hero--inner .price .days {
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero--inner .price .days::before {
+    content: url(/images/icon-clock.svg);
+}
+
+.hero--inner .creator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.hero--inner .creator img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid hsl(215, 51%, 70%);
+    border-radius: 50%;
+}
+
+
+.hero--inner .creator .creator-name {
+    color: white;
+}
